@@ -8,7 +8,12 @@ todoList.addEventListener("click", actionsChecks);
 filterOption.addEventListener("click", filterTodo);
 document.addEventListener("DOMContentLoaded", getTodos);
 
-function addTodo(event) {
+function addTodo(event) {  
+
+  if (!todoInput.checkValidity()) {
+    return;
+  }
+
   event.preventDefault();
 
   const todoDiv = document.createElement("div");
@@ -129,7 +134,7 @@ function removeLocalStorageTodo(todo) {
   else todos = JSON.parse(localStorage.getItem("todos"));
 
   const todoIndex = todo.children[0].innerText;
-  
+
   todos.splice(todos.indexOf(todoIndex), 1);
 
   localStorage.setItem("todos", JSON.stringify(todos));

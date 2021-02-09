@@ -31,11 +31,20 @@ form button {
   background: white;
 }
 
+form input {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
 form button {
   color: #faa43a;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 form button:hover {
@@ -122,6 +131,9 @@ select {
   cursor: pointer;
   padding: 1rem;
   background: white;
+
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .select::after{
@@ -132,10 +144,11 @@ select {
   right: 0;
   padding: 1rem;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;  
 }
 
 .select:hover::after{
   background: white;
   color: #faa43a;
 }
+
